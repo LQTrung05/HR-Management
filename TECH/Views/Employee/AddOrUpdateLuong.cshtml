@@ -1,0 +1,103 @@
+﻿@{
+    Layout = null;
+}
+<style>
+     .avatar-img{
+        width: 130px !important;
+        height: 130px !important;
+            border-radius: 50%;
+    border: 1px solid #ddd;
+    }
+    .image-upload{
+        margin-bottom: 10px;
+    }
+</style>
+<div id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalTitle" class="modal fade bd-example-modal-lg" aria-modal="true">
+    <div role="document" class="modal-dialog modal-lg">
+        <form id="form-submit" action="#">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 id="titleModal" class="modal-title white">Thêm mới nhân viên</h5>
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">                   
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="first-name-icon"> Họ và tên </label>
+                                <div class="position-relative">
+                                 @*   <input type="text" placeholder="Nhập họ và tên" id="EmployeeCode" name="EmployeeCode" class="form-control custom-format">*@
+                                     <select id="EmployeeCode" name="EmployeeCode" class="form-select select"></select>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>   
+                        @*<div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="mobile-id-icon"> Hệ số </label>
+                                <div class="position-relative">
+                                    <input type="text" placeholder="Hệ số" id="Coefficient" name="Coefficient" class="form-control custom-format" disabled>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>*@
+                         <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="mobile-id-icon"> Lương cơ bản </label>
+                                <div class="position-relative">
+                                    <input type="number" placeholder="Lương cơ bản" id="Basicsalary" name="Basicsalary" class="form-control custom-format">
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                         <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="mobile-id-icon"> Lương KPI </label>
+                                <div class="position-relative">
+                                    <input type="number" placeholder="Lương KPI" id="SalaryKPI" name="SalaryKPI" class="form-control custom-format">                                    
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        @*<div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="email-id-icon">Thưởng/Phạt</label>
+                                <div class="position-relative">
+                                    <div class="table-responsive" style=" width: 100%; display: inline-block; margin-top: 15px;">
+                                        <table id="table1" class="table table-striped table-custom">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:3%">STT</th>
+                                                    <th width="15%">Tên</th>
+                                                    <th width="15%">Loại</th>
+                                                    <th width="15%">Tiền Thưởng/Phạt</th>
+                                                    <th width="15%">Note</th>
+                                                    <th style="text-align: center;" width="10%">Thao tác</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tblDataThuongPhat">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>*@
+                       
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="password-id-icon">Note</label>
+                                <div class="position-relative">
+                                      <input type="text" placeholder="ghi chú" id="Note" name="Note" class="form-control custom-format"> 
+                                </div>
+                                <!---->
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="modal-footer"><button type="submit" class="btn btn-primary me-1 mb-1 btn-submit-format">Thêm mới</button></div>
+                </div>
+                </div>
+        </form>
+    </div>
+</div>

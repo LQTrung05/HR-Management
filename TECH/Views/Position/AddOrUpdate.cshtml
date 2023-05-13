@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+
+<div id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalTitle" class="modal fade bd-example-modal-lg" aria-modal="true">
+    <div role="document" class="modal-dialog">
+        <form id="form-submit" action="#">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 id="titleModal" class="modal-title white">Thêm mới chức vụ</h5>
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="first-name-icon"> Tên chức vụ </label>
+                                <div class="position-relative">
+                                    <input type="text" placeholder="" id="PositionName" name="PositionName" class="form-control custom-format">
+                                </div>
+                                <!---->
+                            </div>
+                        </div>  
+                         <div class="col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="first-name-icon"> Hệ số lương </label>
+                                <div class="position-relative">
+                                    <input type="number" step="0.1" placeholder="" id="Coefficient" name="Coefficient" class="form-control custom-format">
+                                </div>
+                                <!---->
+                            </div>
+                        </div>   
+                        <div class="col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="password-id-icon">Ghi chú</label>
+                                <div class="position-relative">
+                                      <textarea name="Note" id="Note" rows="3" placeholder="..." class="form-control" style="padding-left: 10px"></textarea>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer"><button type="submit" class="btn btn-primary me-1 mb-1 btn-submit-format">Thêm mới</button></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

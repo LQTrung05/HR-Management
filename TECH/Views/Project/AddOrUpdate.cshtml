@@ -1,0 +1,71 @@
+﻿@{
+    Layout = null;
+}
+
+<div id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalTitle" class="modal fade bd-example-modal-lg" aria-modal="true">
+    <div role="document" class="modal-dialog">
+        <form id="form-submit" action="#">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 id="titleModal" class="modal-title white">Thêm mới dự án</h5>
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="first-name-icon"> Tên dự án </label>
+                                <div class="position-relative">
+                                    <input type="text" placeholder="" id="ProjectName" name="ProjectName" class="form-control custom-format">
+                                </div>
+                                <!---->
+                            </div>
+                        </div>  
+                         <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="mobile-id-icon"> Ngày bắt đầu </label>
+                                <div class="position-relative">
+                                    <input type="text" placeholder="" id="StartDate" name="StartDate" class="form-control custom-format" autocomplete="off">
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="mobile-id-icon"> Ngày kết thúc </label>
+                                <div class="position-relative">
+                                    <input type="text" placeholder="" id="EndDate" name="EndDate" class="form-control custom-format" autocomplete="off">
+                                </div>
+                                <!---->
+                            </div>
+                        </div>  
+                          <div class="col-6 project-status">
+                            <div class="form-group has-icon-left">
+                                <label for="password-id-icon">Trạng thái</label>
+                                <div class="position-relative">
+                                    <select id="Status" name="Status" class="form-select select">
+                                        <option value="">Chọn trạng thái</option>
+                                        <option value="1">Đang làm</option>
+                                        <option value="2">Đã hủy</option>
+                                        <option value="3">Đã hoàn thành</option>
+                                    </select>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="password-id-icon">Ghi chú</label>
+                                <div class="position-relative">
+                                      <textarea name="Note" id="Note" rows="3" placeholder="..." class="form-control" style="padding-left: 10px"></textarea>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer"><button type="submit" class="btn btn-primary me-1 mb-1 btn-submit-format">Thêm mới</button></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

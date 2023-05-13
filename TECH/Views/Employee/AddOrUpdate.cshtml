@@ -1,0 +1,209 @@
+﻿@{
+    Layout = null;
+}
+<style>
+    .avatar-img {
+        width: 130px !important;
+        height: 130px !important;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+    }
+
+    .image-upload {
+        margin-bottom: 10px;
+    }
+
+    .margin-righ {
+        margin-right: 0.5rem;
+    }
+    .margin-left{
+        margin-left: 8rem;
+    }
+</style>
+<div id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalTitle" class="modal fade bd-example-modal-lg" aria-modal="true">
+    <div role="document" class="modal-dialog modal-lg">
+        <form id="form-submit" action="#">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 id="titleModal" class="modal-title white">Thêm mới nhân viên</h5>
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="image-upload center">
+                                <div class="text-center">
+                                    <label for="Avatar">
+                                        <img src="../../../public/images/avatar-mac-dinh.jpg" alt="profile" class="avatar-img">
+                                    </label>
+                                </div>
+                                <input type="file" id="Avatar" name="Avatar" class="form-control avatar" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="first-name-icon"> Họ và tên </label>
+                                <div class="position-relative">
+                                    <input type="text" placeholder="" id="FullName" name="FullName" class="form-control custom-format">
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="mobile-id-icon"> Ngày sinh </label>
+                                <div class="position-relative">
+                                    <input type="text" placeholder="" id="YearOfBirth" name="YearOfBirth" class="form-control custom-format">
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="password-id-icon">Giới tính</label>
+                                <div class="position-relative ">
+                                    @*<select id="Gender" name="Gender" class="form-select select">
+                                        <option value="">Chọn giới tính</option>
+                                        <option value="1">Nam</option>
+                                        <option value="2">Nữ</option>
+                                        </select>*@
+                                    <input class="form-check-input margin-righ" type="radio" id="Male" name="Gender" value="1">
+                                    <label class="form-check-label " for="Male">Nam</label>
+
+                                    <input class="form-check-input margin-left margin-righ" type="radio" id="Female" name="Gender" value="2">
+                                    <label class="form-check-label" for="Female">Nữ</label>
+
+
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="mobile-id-icon"> CMND </label>
+                                <div class="position-relative">
+                                    <input type="text" placeholder="" id="CMND" name="CMND" class="form-control custom-format">
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="mobile-id-icon"> Số điện thoại </label>
+                                <div class="position-relative">
+                                    <input type="text" placeholder="" id="SDT" name="SDT" class="form-control custom-format">
+                                    <label id="phone_number-error" class="error phone_number-exist" for="phone_number" style="display: none;color:red">Số điện thoại đã tồn tại</label>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="email-id-icon">Email</label>
+                                <div class="position-relative">
+                                    <input type="text" placeholder="" id="Email" name="Email" class="form-control custom-format">
+                                    <label id="email-error " class="error email-exist" style="display: none;" for="email">Email đã tồn tại</label>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="email-id-icon">Học vấn</label>
+                                <div class="position-relative">
+                                    <select id="LevelAcademic" name="LevelAcademic" class="form-select select">
+                                        <option value="">Chọn trạng thái</option>
+                                        <option value="1">Cao Đẳng</option>
+                                        <option value="2">Đại Học</option>
+                                        <option value="3">Tiến Sĩ</option>
+                                        <option value="4">Giáo Sư</option>
+                                    </select>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="mobile-id-icon"> Chức vụ </label>
+                                <div class="position-relative">
+                                    <select id="PositionCode" name="PositionCode" class="form-select select">
+                                    </select>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="mobile-id-icon"> Phòng ban</label>
+                                <div class="position-relative">
+                                    <select id="RoomCode" name="RoomCode" class="form-select select">
+                                    </select>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        @*<div class="col-6">
+                            <div class="form-group has-icon-left">
+                            <label for="password-id-icon">Loại tài khoản</label>
+                            <div class="position-relative">
+                            <select id="Role" name="Role" class="form-select select">
+                            <option value="">Chọn loại tài khoản</option>
+                            <option value="1">Quản trị viên</option>
+                            <option value="2">Nhân viên</option>
+                            </select>
+                            </div>
+                            <!---->
+                            </div>
+                            </div>*@
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="password-id-icon">Tên đăng nhập</label>
+                                <div class="position-relative">
+                                    <input type="text" placeholder="" id="UserName" name="UserName" class="form-control">
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="password-id-icon">Mật khẩu</label>
+                                <div class="position-relative">
+                                    <input type="password" placeholder="" id="Password" name="Password" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="password-id-icon">Nhập lại mật khẩu</label>
+                                <div class="position-relative">
+                                    <input type="password" placeholder="" id="confirm_password" name="confirm_password" class="form-control">
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="mobile-id-icon"> Lương cơ bản </label>
+                                <div class="position-relative">
+                                    <input type="number" placeholder="" id="Basicsalary" name="Basicsalary" class="form-control custom-format">
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group has-icon-left">
+                                <label for="password-id-icon">Địa chỉ</label>
+                                <div class="position-relative">
+                                    <input type="text" name="Address" id="Address" placeholder="" class="form-control" />
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer"><button type="submit" class="btn btn-primary me-1 mb-1 btn-submit-format">Thêm mới</button></div>
+                </div>
+        </form>
+    </div>
+</div>
